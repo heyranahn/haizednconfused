@@ -7,8 +7,8 @@ def squared_threes():
     for value in range(0, 100):
         if value % 3 == 0 and value != 0:
             return_value.append(value**2)
-    # YOUR CODE GOES HERE
     
+    # END SHOULDNT GO BEYOND HERE
     return return_value
 
 if __name__ == "__main__":
