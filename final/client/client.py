@@ -3,5 +3,8 @@
 
 import requests
 
-r = requests.get("http://localhost:5000/hello{name}")
-print(r.text)
+print("please enter your name: ")
+name = input()
+url = f"http://localhost:5000/hello/{name}"
+response = requests.get(url)
+print(response.text)
