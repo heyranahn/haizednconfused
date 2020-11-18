@@ -2,6 +2,7 @@
 #Return value must be a dictionary with the key 'hello' and the value of the name url parameter
 #Server should listen on port 5000
 
+#import sqlite3
 from flask import Flask
 from markupsafe import escape
 
@@ -22,4 +23,3 @@ def search_title(descr, c=None):
         results.append(movie)
     return results
 
-    
