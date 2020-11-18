@@ -8,3 +8,9 @@ name = input()
 url = f"http://localhost:5000/hello/{name}"
 response = requests.get(url)
 print(response.text)
+
+print("please enter the movie: ")
+movie = input()
+#url = f"http://localhost:5000/hello/{name}"
+response = requests.get(url)
+print(response.text)
