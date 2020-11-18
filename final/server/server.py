@@ -11,6 +11,20 @@ app = Flask(__name__)
 def hello_name(name):
     return {"hello": name}
 
+@app.route('/movies/<int:movies_id>')
+@db
+def search_title(descr, c=None):
+    results = []
+    parm = "%{}%".format(descr)
+    SELECT_QUERY = " SELECT * FROM movies WHERE title like ? LIMIT 5 "
+    result = c.execute(SELECT_QUERY, (parm,))
+    for movie in result:
+        results.append(movie)
+    return results
+
+
+@app.route('/movies/bytitle/<str:title>')
+
 #@app.route('/')
 #def index():
     #return 'Index Page\n'
